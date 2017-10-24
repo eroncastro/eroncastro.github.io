@@ -18,6 +18,12 @@
 
       The selectors are grouped by especificity: the more general, come first
       and the more specific later.
+
+      CSS Selectors
+      - ID: More specific. It is the highest you can go in specificity.
+            You can only have one id per element per page.
+      - Classes: More flexible. You can have multiple classes on a single element and
+                 on a single page.
     -->
     <style type="text/css">
       /*
@@ -30,13 +36,16 @@
         color: red;
       }
 
-      div {
+       .bio-box {
         border: 1px solid black;
       }
 
-      /* The following selector increases the specificity of anchor tags inside divs */
-      div a {
+      .bio-box a {
         color: green;
+      }
+
+      #exec-bio {
+        background-color: lightgray;
       }
     </style>
   </head>
@@ -54,16 +63,16 @@
       </li>
     </ul>
     <h2>I'm an h2</h2>
-    <div>
+    <div id="exec-bio" class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
-    <div>
+    <div class="bio-box">
       <a href="http://example.com/">I'm a link</a>
     </div>
   </body>
