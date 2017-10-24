@@ -3,32 +3,68 @@
   <head>
     <title>Test Page: Don't Panic</title>
     <meta charset="utf-8">
+    <!--
+      The style tag could be placed anywhere on the page. But, the
+      best practice is to put it inside the head tag, because if any
+      error happens on the styles section, it won't be shown to the users.
+      The following is an internal style sheet.
+
+      Adding declarations alphabetically helps finding properties. Example:
+
+      div {
+        border: 1px solid black;
+        font-size: 1em;
+      }
+
+      The selectors are grouped by especificity: the more general, come first
+      and the more specific later.
+    -->
+    <style type="text/css">
+      /*
+        CSS Declaration:
+        Selector {
+          property: value;
+        }
+      */
+      a {
+        color: red;
+      }
+
+      div {
+        border: 1px solid black;
+      }
+
+      /* The following selector increases the specificity of anchor tags inside divs */
+      div a {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <h1>I'm an h1</h1>
     <ul>
       <li>
-        <a href="http://example.com/" style="color: red;">Link</a>
+        <a href="http://example.com/">Link</a>
       </li>
       <li>
-        <a href="http://example.com/" style="color: red;">Link</a>
+        <a href="http://example.com/">Link</a>
       </li>
       <li>
-        <a href="http://example.com/" style="color: red;">Link</a>
+        <a href="http://example.com/">Link</a>
       </li>
     </ul>
     <h2>I'm an h2</h2>
-    <div style="border: 1px solid black;">
-      <a href="http://example.com/" style="color: green;">I'm a link</a>
+    <div>
+      <a href="http://example.com/">I'm a link</a>
     </div>
-    <div style="border: 1px solid black;">
-      <a href="http://example.com/" style="color: green;">I'm a link</a>
+    <div>
+      <a href="http://example.com/">I'm a link</a>
     </div>
-    <div style="border: 1px solid black;">
-      <a href="http://example.com/" style="color: green;">I'm a link</a>
+    <div>
+      <a href="http://example.com/">I'm a link</a>
     </div>
-    <div style="border: 1px solid black;">
-      <a href="http://example.com/" style="color: green;">I'm a link</a>
+    <div>
+      <a href="http://example.com/">I'm a link</a>
     </div>
   </body>
 </html>
